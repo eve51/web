@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아침햇살 리디자인</title>
+    <link rel="SHORTCUT ICON" href="/img/icon.svg">
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+html{
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+#wrap {
+    width: 1920px;
+    height: 3250px;
+    background: rgb(92, 135, 51);
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    overflow: hidden;
+}
+/* -----------------메뉴------------------ */
+.nav {
+    width: 1920px;
+    height: 120px;
+    position: absolute;
+    z-index: 10;
+
+}
+.logo {
+    float: left;
+    padding-left: 60px;
+    font-size: 50px;
+    
+
+}
+.logo a {
+    text-decoration: none;
+    color: white;
+}
+
+.menu_bt {
+    width: 80px;
+    height: 80px;
+    background: #FFA13B;
+    position: absolute;
+    right: 0;
+    border-radius: 20% 0 0 20%;
+    box-shadow:10px 0 10px 10px #4e4e4e;
+    line-height: 80px;
+}
+.menu_img {
+    width: 40px;
+    padding-left: 20px;
+    padding-top: 20px;
+    
+}
+.bar {
+    width: 600px;
+    height: 95px;
+    background: #FFA13B;
+    display: flex;
+    position: absolute;
+    right: -720px;
+    transition: transform 0.3s ease;
+    border-radius: 10px 0 0 10px;
+    border: 4px solid rgb(117, 117, 117);
+}
+.ch {
+    width: 180.07px;
+    height: 168.33px;
+    background: url(./img/ch.png);
+    position: absolute;
+    top: 90px;
+    left: 10px;
+    
+}
+.clo {
+    width: 80px;
+    height: 95px;
+    display: flex;
+    position: absolute;
+    background: #FFA13B;
+    border-radius: 10px 0 0 10px; 
+      
+}
+.clo_img {
+    width: 25px;
+    height: 25px;
+    padding-left: 27px;
+    padding-top: 35px;
+}
+.menu {
+    display: flex;
+    float: right;
+    list-style: none;
+    padding-right: 60px;
+    padding-left: 80px;
+   
+}
+.menu li {
+    padding-left: 30px;
+    line-height: 60px;
+}
+.menu li a {
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+    font-weight: 900;
+    vertical-align: middle;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.menu li a:hover {
+    text-decoration: underline;
+    color: #5E8ABD;
+    
+}
+
+.line {
+    position: absolute;
+    width: 5px;
+    height: 43px;
+    background: #fff;
+    left: 65%;
+    top: 25px;
+}
+
+.shop1_img {
+    width: 40px;
+    height: 40px;  
+    position: absolute;
+    top: 30px;
+    right: 115px;
+    display: block;
+}
+.shop2_img{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 30px;
+    right: 115px;
+    display: none;
+
+}
+.shop a {
+    position: absolute;
+    right: 50px;
+}
+/* -----------------con1------------------ */
+
+#con1 {
+    width: 1920px;
+    height: 1050px;
+    background: url(./img/background.jpg);
+    overflow: hidden;
+    position: fixed;
+    
+}
+.light {
+    width: 100%;
+    height: 1000px;
+    background-repeat: no-repeat;
+    background: url(./img/light.png);
+    
+}
+
+#ob {
+    transition: transform 1s ease;
+}
+.sun{
+    width: 539px;
+    height: 810.96px;
+    background: url(./img/sun.png);
+    position: absolute;
+    top: -81px;
+    left: 421px;
+
+}
+
+.left_cl {
+    width: 446.55px;
+    height: 495.48px;
+    background: url(./img/left_cl.png);
+    position: absolute;
+    left: -59px;
+    top: -81px;
+}
+
+.right_cl {
+    width: 446.55px;
+    height: 403.67px;
+    background: url(./img/right_cl.png);
+    position: absolute;
+    top: -83px;
+    right: -127px;
+}
+
+.right_mo {
+    width: 1117.13px;
+    height: 532.13px;
+    background: url(./img/right_mo.png);
+    position: absolute;
+    top: 381px;
+    right: -328px;
+    border-radius: 50% 25% 0 0;
+}
+
+.left_mo{
+    width: 1117.69px;
+    height: 894.7px;
+    background: url(./img/left_mo.png);
+    position: absolute;
+    top: -81px;
+    right: 119px;
+    transition: transform 0.3s ease;
+    border-radius: 400% 100% 0 0;
+
+}
+
+.left_r {
+    width: 459.46px;
+    height: 344.8px;
+    background: url(./img/left_r.png);
+    position: absolute;
+    top: 630.5px;
+    left: 723.08px;
+    
+}
+.right_r {
+    width: 459.46px;
+    height: 344.8px;
+    background: url(./img/left_r.png);
+    position: absolute;
+    top: 631.35px;
+    right: -170px;
+}
+
+.ob1 {
+    width: 1282.65px;
+    height: 591px;
+    background: url(./img/ob11.png);
+    position: absolute;
+    top: 486px;
+    left: -281px;
+    
+}
+
+.ob2 {
+    width: 1147px;
+    height: 487px;
+    background: url(./img/ob2.png);
+    position: absolute;
+    top: 590px;
+    right: 0;
+    border-radius: 50% 40% 0 0;
+    
+}
+
+.can {
+    width: 670px;
+    height: 740px;
+    background: url(./img/can.png);
+    position: absolute;
+    top: 250px;
+    left: 231px;
+    z-index: 2;
+    border-radius: 22% 52% 50% 100%;
+}
+.tx {
+    width: 400px;
+    height: 300px;
+    right: 390px;
+    top: 400px;
+    position: absolute;
+    z-index: 2;
+    border-radius: 0 0 50% 0;
+    
+}
+.tx h1 {
+    line-height: 110px;
+    font-size: 100px;
+    color: white;
+    margin-top: -30px;
+    text-shadow: 0 1px 0 #fff, 8px 4px 20px rgba(0,0,0,1 );
+    letter-spacing: 3px; 
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.tx  h2 {
+    font-size: 50px; 
+    margin-top: -70px;
+    color: white;
+    text-shadow: 0 1px 0 #fff, 8px 4px 10px  rgba(0,0,0,1 ); 
+    letter-spacing: 3px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.bt_box {
+    width: 370px;
+    height: 66px;
+    display: flex;
+    margin-top: -15px;
+}
+
+.bt_box div {
+    width: 160px;
+    height: 68px;
+    background: #5E8ABD;
+    border-radius: 50px;
+    text-align: center;
+    position: relative;
+    box-shadow: 8px 4px 0 rgba(211, 209, 209, 0.8) ;
+    border: 5px solid #fff;
+    line-height: 60px;
+}
+
+.bt_box div:hover {
+    background: #ffffff;
+    transition: 1.5s;
+}
+
+.bt_box div:first-child{
+    margin-right: 42px;
+    background: #FFA13B;
+    border: 5px solid #fff;
+}
+.bt_box div:first-child:hover{
+    background: #fff;
+    transition: 1.5s;
+}
+
+.bt_box a{
+    font-size: 30px;
+    position: absolute;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    vertical-align: middle;
+}
+.bt_box div:hover > a{
+    color: #FFA13B;
+    transition: 1.5s;
+    
+}
+.bt_box div:last-child:hover >a {
+    color: #5E8ABD
+}
+
+/* -----------------con2------------------ */
+#con2 {
+    width: 1920px;
+    height: 1337px;
+    background: url(./img/paper.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    background-size: 2000px;
+    overflow: hidden;
+    top: 950px;
+    padding-left: 3px;
+    left: -3px;
+    z-index: 10;
+    
+}
+.con2_tx {
+    width: 970px;
+    height: 270px;
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 180px;
+    text-align: center;
+}
+.con2_tx h1 {
+    font-size: 60px;
+    color: #202020;
+    line-height: 73px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.con2_tx p {
+    font-size: 20px;
+    color: #6E6C6A;
+    line-height: 40px;
+    font-weight: 900;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.con2_tx2 {
+    width: 1100px;
+    height: 490px;
+    position: relative;
+    top: 800px;
+    left: 412px;
+    display: flex;
+}
+.tx2_box {
+    position: absolute;
+    left: 0;
+    top: 89px;
+    
+}
+.con2_tx2 h1 {
+    font-size: 45px;
+    color: #fff;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.con2_tx2 p {
+    font-size: 25px;
+    color: #fff;
+    line-height: 40px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.can2 {
+    width: 274px;
+    height: 490px;
+    background: url(./img/can2.png);
+    position: absolute;
+    right: 0;
+}
+
+#con3 {
+    width: 1920px;
+    height: 800px;
+    background: url(./img/RY.png);
+    z-index: 10;
+    position: absolute;
+    top: 2285px;
+    background-repeat: no-repeat;
+}
+.ry {
+    width: 450px;
+    height: 611px;
+    background: url(./img/RY_C1.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    right: 423px;
+    top: 70px;
+}
+.ry:hover {
+    background: url(./img/RY_C2.png);
+}
+#con4 {
+    width: 1920px;
+    height: 200px;
+    background: #424242;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+}
+#con4 h2{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 90px;
+    color: #fff;
+}
+</style>
+<body>
+    <div id="wrap">
+        <div id="con1">
+            <div class="nav">
+                <h1 class="logo"><a href="#"><img src="./img/logo.png" alt=""></a></h1>
+                <div class="menu_bt">
+                    <img class="menu_img" src="./img/menu.png" alt="#">
+                </div>
+                <div class="bar">
+                    
+                    <ul class="menu">
+                        <li><a href="https://www.wjfood.co.kr/Brand/Brand.aspx?bi=B0301#product_detailview2" target="blank">브랜드</a></li>
+                        <li><a href="#con3">커뮤니티</a></li>
+
+                        <div class="line"></div>
+
+                        <li class="shop">
+                            <img class="shop1_img" src="./img/shop1.png" alt="shop">
+                            <img class="shop2_img" src="./img/shop2.png" alt="shop2">
+                            <a href="#con2">shop</a>
+                        </li>
+                    </ul>
+                    <div class="ch"></div>
+                    <div class="clo">
+                        <img class="clo_img" src="./img/close.png" alt="#">
+                    </div>
+                </div>
+            </div>
+
+            <div class="light">
+                
+                <div id="ob" class="sun"></div>
+                <div id="ob" class="left_cl"></div>
+                <div id="ob" class="right_cl"></div>
+                <div id="ob" class="right_mo"></div>
+                <div id="ob" class="left_mo"></div>
+                <div id="ob" class="left_r"></div>
+                <div id="ob" class="right_r"></div>
+                <div id="ob" class="ob1"></div>
+                <div id="ob" class="ob2"></div>
+                <div class="can"></div>
+                <div class="tx">
+                    <h1>morning<br>sunlight</h2>
+                    <h2>아침햇살</h2>
+                    <div class="bt_box">
+                        <div><a href="https://www.wjfood.co.kr/Brand/Brand.aspx?bi=B0301#product_detailview2" target="blank">Site</a></div>
+                        <div><a href="#con2">more</a></div>
+                    </div>
+                </div>
+                 
+            </div>  
+        </div>
+
+        <div id="con2">
+            <div class="con2_tx">
+                <h1>
+                    100% 우리땅, 우리곡물<br>
+                    부드럽게 내 속을 채우는 아침햇살 
+                </h1>
+                <p>
+                    세계 최초로 "쌀을 사용한 곡물음료로 특허"를 내어 대한민국 음료시장에 음료 카테고리를 만들었다고 
+                    해도 과언이 아닌 쌀음료. 쌀뜨물과 숭늉을 섞어서 만든 듯한 구수하고 달달한 맛의 음료.
+                </p>
+            </div>
+            <div class="con2_tx2">
+                <div class="tx2_box">
+                    <h1>대한민국 대표 쌀 음료 아침햇살!</h1>
+                    <p>
+                        속을 부드럽게 채워주는 대한민국 대표 쌀 음료 아침햇살은 100% <br>국산 곡물로 만들어 우리땅에서 자란 쌀 고유의 맛과 영양을 담은 <br>건강 음료입니다.쌀, 현미 등 몸에 좋은 곡물이 잘 어우러져 자극없이<br>부드럽게 속을 채워줍니다.
+                    </p>
+                </div>
+                <div class="can2"></div>
+            </div>
+        </div>
+
+        <div id="con3">
+            <div class="ry"></div>
+        </div>
+       
+        <div id="con4">
+            <h2>Copyright 2023. Visual Design 202109005 Kwak Donguk all rights reserved.</h2>
+        </div>
+           
+        
+    </div>
+ 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        const elements = document.querySelectorAll('#ob');
+
+        elements.forEach(element => {
+        element.addEventListener('mouseover', () => {
+           
+            const newX = Math.random() * 40 - 5; 
+            const newY = Math.random() * 40 - 5; 
+            element.style.transform = `translate(${newX}px, ${newY}px)`;
+        });
+
+       
+        element.addEventListener('mouseout', () => {
+            element.style.transform = 'translate(0, 0)';
+        });
+        });
+
+        $(document).ready(function() {
+            $(".menu_bt").click(function() {
+                $(".bar").animate({ right: '+=720px' }, 1000);
+            });
+        });
+        $(document).ready(function() {
+            $(".clo").click(function() {
+                $(".bar").animate({ right: '-=720px' }, 1000);w
+            });
+        });
+        
+        $(function(){
+          $(".shop>a").hover(function(){
+            $(".shop1_img").css("display","none");
+            $(".shop2_img").css("display","block");
+            },function(){
+            $(".shop1_img").css("display","block");
+            $(".shop2_img").css("display","none");
+             });
+        });
+        
+        
+    </script>
+</body>
+</html>
+
+
+
+
